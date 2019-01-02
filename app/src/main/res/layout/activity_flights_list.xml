@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/map_view_layout" />
+
+    <include layout="@layout/translucent_toolbar" />
+
+    <include layout="@layout/map_bottom_sheet" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

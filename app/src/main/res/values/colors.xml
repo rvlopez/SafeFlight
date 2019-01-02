@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/corporate_orange</color>
+    <color name="colorPrimaryDark">@color/white</color>
+    <color name="colorAccent">@color/corporate_blue</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="corporate_orange">#FF8800</color>
+    <color name="corporate_amber">#FF9800</color>
+    <color name="corporate_translucent_orange">#90FF8800</color>
+    <color name="corporate_blue">#184857</color>
+    <color name="black">#000000</color>
+</resources>

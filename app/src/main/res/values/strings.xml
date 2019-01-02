@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SafeFlight</string>
+
+    <string name="api_key">AIzaSyBz0UlmGsKk7dZum9B2L7_Gl2VPLdcB21I</string>
+
+    <string name="search_fly_button">Continue</string>
+    <string name="origin_label">Select your origin:</string>
+    <string name="destination_label">Select your destination</string>
+    <string name="oauth_info">Looking for Airports. \nWait a moment please!</string>
+    <string name="flight_not_found_error">Flights not found! Please, try again with another origin and destination.</string>
+    <string name="flights_toolbar_title">Flights for %1$s - %2$s</string>
+    <string name="flight_time_label">Flight time: %1$s</string>
+</resources>
