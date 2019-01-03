@@ -6,7 +6,7 @@ The following is a brief description of the technical decisions taken for the de
 
 ## App Screenshots
 
-<img src="https://i.imgur.com/NvmTn62.png" width="250">  <img src="https://i.imgur.com/R9Nh51a.png" width="250">  <img src="https://i.imgur.com/VEfje6g.png" width="250">  
+<img src="https://i.imgur.com/NvmTn62.png" width="250">  <img src="https://i.imgur.com/6zkPN5M.png" width="250">  <img src="https://i.imgur.com/Wi2wM9Y.png" width="250">  
 
 <img src="https://i.imgur.com/Fcnsw4b.png" width="250">  <img src="https://i.imgur.com/19UDovJ.png" width="250">  <img src="https://i.imgur.com/51xqhmf.png" width="250"> 
 
