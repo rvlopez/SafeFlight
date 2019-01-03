@@ -8,11 +8,15 @@ The following is a brief description of the technical decisions taken for the de
 
 <img src="https://i.imgur.com/NvmTn62.png" width="250">  <img src="https://i.imgur.com/R9Nh51a.png" width="250">  <img src="https://i.imgur.com/VEfje6g.png" width="250">  
 
-<img src="https://i.imgur.com/lGLbIve.png" width="250">  <img src="https://i.imgur.com/wyiom90.png" width="250">  <img src="https://i.imgur.com/51xqhmf.png" width="250"> 
+<img src="https://i.imgur.com/Fcnsw4b.png" width="250">  <img src="https://i.imgur.com/19UDovJ.png" width="250">  <img src="https://i.imgur.com/51xqhmf.png" width="250"> 
+
+## Error States
+
+<img src="https://i.imgur.com/ONuxo8b.png" width="250">  <img src="https://i.imgur.com/x70qxD3.png" width="250">
 
 ## API Service Highlights
 
-Used the Lufthansa Open REST API (documentation guides)
+Used the Lufthansa Open REST API (documentation <a href="https://developer.lufthansa.com/docs">guides</a>)
 
 ###### HOST 
     https://api.lufthansa.com/v1/
