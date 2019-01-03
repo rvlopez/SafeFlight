@@ -1,4 +1,4 @@
-# SafeFlight
+# SafeFlight <img src="https://i.imgur.com/vROa12U.png" width="50" alt="logo" align="center">
 
 A very simple application made in Kotlin to improve my skills and learn more about this fantastic language. The application uses the Lufthansa Group public API and consists in a form to select origin and destination airports, with some suggestions while is writing, to load those airports in a map and the flights related with them.
 
