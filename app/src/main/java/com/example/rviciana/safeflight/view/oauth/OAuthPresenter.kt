@@ -12,12 +12,23 @@ class OAuthPresenter(private val oAuthUseCase: OAuthUseCase,
 
     internal lateinit var view: OAuthContract.View
 
+    private fun requestAuthCredentials() {
+        oAuthUseCase.execute(::onAuthSuccess, ::onError)
+    }
+
     override fun setView(view: OAuthContract.View) {
         this.view = view
     }
 
     override fun authCredentials() {
-        oAuthUseCase.execute(::onAuthSuccess, ::onError)
+        view.showLoading()
+        requestAuthCredentials()
+    }
+
+    override fun onRetryAuthCredentials() {
+        view.hideError()
+        view.showLoading()
+        requestAuthCredentials()
     }
 
     override fun onStop() {

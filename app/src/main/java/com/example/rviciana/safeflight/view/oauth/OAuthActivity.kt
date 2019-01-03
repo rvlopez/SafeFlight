@@ -31,6 +31,7 @@ class OAuthActivity : RootActivity(), OAuthContract.View {
         super.onCreate(savedInstanceState)
 
         authCredentials()
+        retryConnection.setOnClickListener { presenter.onRetryAuthCredentials() }
     }
 
     override fun onStop() {
@@ -39,8 +40,6 @@ class OAuthActivity : RootActivity(), OAuthContract.View {
     }
 
     private fun authCredentials() {
-        oauthLoading.show()
-        oauthError.hide()
         presenter.authCredentials()
     }
 
@@ -59,8 +58,19 @@ class OAuthActivity : RootActivity(), OAuthContract.View {
         finish()
     }
 
+    override fun showLoading() = oauthLoading.show()
+
+    override fun hideLoading() = oauthLoading.hide()
+
+    override fun hideError() {
+        oauthError.hide()
+        retryConnection.hide()
+        oauthInfo.text = getString(R.string.oauth_info)
+    }
+
     override fun showError(throwable: Throwable) {
         oauthLoading.invisible()
+        retryConnection.show()
         oauthError.show()
         oauthInfo.text = throwable.message
     }

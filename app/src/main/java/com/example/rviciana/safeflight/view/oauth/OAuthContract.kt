@@ -7,6 +7,9 @@ interface OAuthContract {
 
     interface View {
         fun navigateToFormActivity(airportsResponse: AirportsResponse)
+        fun showLoading()
+        fun hideLoading()
+        fun hideError()
         fun showError(throwable: Throwable)
         fun saveOAuthToken(oAuthResponse: OAuthResponse)
     }
@@ -14,6 +17,7 @@ interface OAuthContract {
     interface Presenter {
         fun setView(view: OAuthContract.View)
         fun authCredentials()
+        fun onRetryAuthCredentials()
         fun onStop()
     }
 }
