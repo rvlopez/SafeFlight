@@ -5,7 +5,6 @@ import com.example.rviciana.safeflight.domain.bo.AirportsResponse
 import com.example.rviciana.safeflight.domain.bo.OAuthResponse
 import com.example.rviciana.safeflight.domain.usecase.AirportsUseCase
 import com.example.rviciana.safeflight.domain.usecase.OAuthUseCase
-import javax.inject.Inject
 
 class OAuthPresenter(private val oAuthUseCase: OAuthUseCase,
                      private val airportsUseCase: AirportsUseCase

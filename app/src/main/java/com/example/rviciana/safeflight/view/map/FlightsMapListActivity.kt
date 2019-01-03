@@ -24,7 +24,6 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.gms.maps.model.Polyline
 import com.google.android.gms.maps.model.PolylineOptions
 import kotlinx.android.synthetic.main.map_bottom_sheet.*
 import kotlinx.android.synthetic.main.translucent_toolbar.*
@@ -126,7 +125,7 @@ class FlightsMapListActivity : RootActivity(), FlightsListContract.View, OnMapRe
         googleMap?.addMarker(MarkerOptions().position(origin).title(originAirport.airportCode))
 
         val destinationCoordinate = destinationAirport.position.coordinate
-        val destination = LatLng(destinationCoordinate.latitude, originCoordinate.longitude)
+        val destination = LatLng(destinationCoordinate.latitude, destinationCoordinate.longitude)
         googleMap?.addMarker(MarkerOptions().position(destination).title(destinationAirport.airportCode))
 
         googleMap?.addPolyline(PolylineOptions()

@@ -1,7 +1,6 @@
 package com.example.rviciana.safeflight.view.form
 
 import com.example.rviciana.safeflight.domain.bo.Airport
-import javax.inject.Inject
 
 class FormPresenter(): FormContract.Presenter {
 

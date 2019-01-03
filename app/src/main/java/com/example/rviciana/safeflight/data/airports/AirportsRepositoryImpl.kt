@@ -4,7 +4,6 @@ import com.example.rviciana.safeflight.data.FlightsApi
 import com.example.rviciana.safeflight.data.NetworkConfig
 import com.example.rviciana.safeflight.domain.bo.AirportsResponse
 import io.reactivex.Single
-import javax.inject.Inject
 
 class AirportsRepositoryImpl(private val flightsApi: FlightsApi,
                              private val airportsMapper: AirportsMapper
