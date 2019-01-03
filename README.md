@@ -12,7 +12,11 @@ The following is a brief description of the technical decisions taken for the de
 
 ## Error States
 
-<img src="https://i.imgur.com/ONuxo8b.png" width="250">  <img src="https://i.imgur.com/x70qxD3.png" width="250">
+This application has two possible error scenarios. The first occurs on the airport data loading screen. Two requests are made, the first is the authentication request to receive the access token. Second, the request to receive the airports is made. There is a wide range of errors in both requests, so the error message of the server is displayed in the error screen. The user can retry the connection using the retry button. The second error scenario occurs when requesting flight information between origin and destination. Occasionally, the server does not find route data and returns a 404. Therefore, an error suggestion is displayed instead of the flight list.
+
+#### How is it shown in the app?
+
+<img src="https://i.imgur.com/zPzt8tL.png" width="250">  <img src="https://i.imgur.com/x70qxD3.png" width="250">
 
 ## API Service Highlights
 
