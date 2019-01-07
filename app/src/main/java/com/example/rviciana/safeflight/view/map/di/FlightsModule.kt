@@ -1,6 +1,6 @@
 package com.example.rviciana.safeflight.view.map.di
 
-import com.example.rviciana.safeflight.data.flights.FlightsRepository
+import com.example.rviciana.safeflight.domain.repository.FlightsRepository
 import com.example.rviciana.safeflight.domain.usecase.FlightsUseCase
 import com.example.rviciana.safeflight.view.map.FlightsListContract
 import com.example.rviciana.safeflight.view.map.FlightsListPresenter

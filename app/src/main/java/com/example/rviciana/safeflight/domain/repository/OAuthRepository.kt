@@ -1,4 +1,4 @@
-package com.example.rviciana.safeflight.data.oauth
+package com.example.rviciana.safeflight.domain.repository
 
 import com.example.rviciana.safeflight.data.dto.OAuthData
 import com.example.rviciana.safeflight.domain.bo.OAuthResponse

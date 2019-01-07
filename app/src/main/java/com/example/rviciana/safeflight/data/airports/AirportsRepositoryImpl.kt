@@ -3,6 +3,7 @@ package com.example.rviciana.safeflight.data.airports
 import com.example.rviciana.safeflight.data.FlightsApi
 import com.example.rviciana.safeflight.data.NetworkConfig
 import com.example.rviciana.safeflight.domain.bo.AirportsResponse
+import com.example.rviciana.safeflight.domain.repository.AirportsRepository
 import io.reactivex.Single
 
 class AirportsRepositoryImpl(private val flightsApi: FlightsApi,

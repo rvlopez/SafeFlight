@@ -2,7 +2,7 @@ package com.example.rviciana.safeflight.domain.usecase
 
 import com.example.rviciana.safeflight.data.NetworkConfig
 import com.example.rviciana.safeflight.data.dto.OAuthData
-import com.example.rviciana.safeflight.data.oauth.OAuthRepository
+import com.example.rviciana.safeflight.domain.repository.OAuthRepository
 import com.example.rviciana.safeflight.domain.bo.OAuthResponse
 import io.reactivex.Scheduler
 import io.reactivex.disposables.Disposable

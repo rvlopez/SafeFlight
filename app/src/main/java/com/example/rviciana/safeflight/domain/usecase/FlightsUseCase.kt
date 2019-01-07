@@ -1,6 +1,6 @@
 package com.example.rviciana.safeflight.domain.usecase
 
-import com.example.rviciana.safeflight.data.flights.FlightsRepository
+import com.example.rviciana.safeflight.domain.repository.FlightsRepository
 import com.example.rviciana.safeflight.domain.bo.ScheduleResource
 import io.reactivex.Scheduler
 import io.reactivex.disposables.Disposable

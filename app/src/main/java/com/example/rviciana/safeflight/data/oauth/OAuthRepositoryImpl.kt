@@ -3,6 +3,7 @@ package com.example.rviciana.safeflight.data.oauth
 import com.example.rviciana.safeflight.data.FlightsApi
 import com.example.rviciana.safeflight.data.dto.OAuthData
 import com.example.rviciana.safeflight.domain.bo.OAuthResponse
+import com.example.rviciana.safeflight.domain.repository.OAuthRepository
 import io.reactivex.Single
 
 class OAuthRepositoryImpl(private val flightsApi: FlightsApi,

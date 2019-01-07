@@ -3,13 +3,13 @@ package com.example.rviciana.safeflight.di
 import com.example.rviciana.safeflight.data.FlightsApi
 import com.example.rviciana.safeflight.data.NetworkConfig
 import com.example.rviciana.safeflight.data.airports.AirportsMapper
-import com.example.rviciana.safeflight.data.airports.AirportsRepository
+import com.example.rviciana.safeflight.domain.repository.AirportsRepository
 import com.example.rviciana.safeflight.data.airports.AirportsRepositoryImpl
 import com.example.rviciana.safeflight.data.flights.FlightsMapper
-import com.example.rviciana.safeflight.data.flights.FlightsRepository
+import com.example.rviciana.safeflight.domain.repository.FlightsRepository
 import com.example.rviciana.safeflight.data.flights.FlightsRepositoryImpl
 import com.example.rviciana.safeflight.data.oauth.OAuthMapper
-import com.example.rviciana.safeflight.data.oauth.OAuthRepository
+import com.example.rviciana.safeflight.domain.repository.OAuthRepository
 import com.example.rviciana.safeflight.data.oauth.OAuthRepositoryImpl
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import dagger.Module

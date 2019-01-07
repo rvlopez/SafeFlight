@@ -1,4 +1,4 @@
-package com.example.rviciana.safeflight.data.airports
+package com.example.rviciana.safeflight.domain.repository
 
 import com.example.rviciana.safeflight.domain.bo.AirportsResponse
 import io.reactivex.Single

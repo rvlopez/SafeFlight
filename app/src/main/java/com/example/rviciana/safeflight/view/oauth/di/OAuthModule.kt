@@ -1,7 +1,7 @@
 package com.example.rviciana.safeflight.view.oauth.di
 
-import com.example.rviciana.safeflight.data.airports.AirportsRepository
-import com.example.rviciana.safeflight.data.oauth.OAuthRepository
+import com.example.rviciana.safeflight.domain.repository.AirportsRepository
+import com.example.rviciana.safeflight.domain.repository.OAuthRepository
 import com.example.rviciana.safeflight.domain.usecase.AirportsUseCase
 import com.example.rviciana.safeflight.domain.usecase.OAuthUseCase
 import com.example.rviciana.safeflight.view.oauth.OAuthContract
