@@ -74,7 +74,7 @@ class OAuthPresenterTest {
 
     @Test
     fun `should navigate on airports data success`() {
-        val airportsResponse = givenSuccessAirportsReponse()
+        val airportsResponse = givenSuccessAirportsResponse()
         presenter.onFlightsSuccess(airportsResponse)
 
         verify(mockView).navigateToFormActivity(airportsResponse)
@@ -85,7 +85,7 @@ class OAuthPresenterTest {
                     "", "", 0
             )
 
-    private fun givenSuccessAirportsReponse(): AirportsResponse =
+    private fun givenSuccessAirportsResponse(): AirportsResponse =
             AirportsResponse(
                     AirportResource(
                             Airports(

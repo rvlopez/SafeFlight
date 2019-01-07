@@ -2,7 +2,7 @@ package com.example.rviciana.safeflight.view.form
 
 import com.example.rviciana.safeflight.domain.bo.Airport
 
-class FormPresenter(): FormContract.Presenter {
+class FormPresenter: FormContract.Presenter {
 
     internal lateinit var view: FormContract.View
 

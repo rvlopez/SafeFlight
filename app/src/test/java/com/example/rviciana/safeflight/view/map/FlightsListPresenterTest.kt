@@ -26,14 +26,14 @@ class FlightsListPresenterTest {
 
     @Test
     fun `should loading when fetch flights`() {
-        presenter.onViewReady(any(), any(), any(), any())
+        presenter.onViewReady("", "", "", "")
 
         verify(mockView).showLoading()
     }
 
     @Test
     fun `should request data on view ready`() {
-        presenter.onViewReady(any(), any(), any(), any())
+        presenter.onViewReady("", "", "", "")
 
         verify(mockFlightsUseCase).execute(any(), any(), any(), any(), any(), any())
     }
