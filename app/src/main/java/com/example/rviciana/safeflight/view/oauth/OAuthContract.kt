@@ -9,8 +9,8 @@ interface OAuthContract {
         fun navigateToFormActivity(airportsResponse: AirportsResponse)
         fun showLoading()
         fun hideLoading()
-        fun hideError()
         fun showError(throwable: Throwable)
+        fun hideError()
         fun saveOAuthToken(oAuthResponse: OAuthResponse)
     }
 

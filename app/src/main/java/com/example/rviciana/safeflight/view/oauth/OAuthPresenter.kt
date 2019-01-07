@@ -36,7 +36,7 @@ class OAuthPresenter(private val oAuthUseCase: OAuthUseCase,
         airportsUseCase.dispose()
     }
 
-    private fun onAuthSuccess(oAuthResponse: OAuthResponse) {
+    internal fun onAuthSuccess(oAuthResponse: OAuthResponse) {
         view.saveOAuthToken(oAuthResponse)
         airportsUseCase.execute(oAuthResponse.accessToken,
                 NetworkConfig.LIMIT,
@@ -45,11 +45,11 @@ class OAuthPresenter(private val oAuthUseCase: OAuthUseCase,
                 ::onError)
     }
 
-    private fun onFlightsSuccess(airportsResponse: AirportsResponse) {
+    internal fun onFlightsSuccess(airportsResponse: AirportsResponse) {
         view.navigateToFormActivity(airportsResponse)
     }
 
-    private fun onError(throwable: Throwable) {
+    internal fun onError(throwable: Throwable) {
         view.showError(throwable)
     }
 

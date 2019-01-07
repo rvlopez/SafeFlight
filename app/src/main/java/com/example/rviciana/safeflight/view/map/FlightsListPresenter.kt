@@ -19,7 +19,7 @@ class FlightsListPresenter(private val flightsUseCase: FlightsUseCase
 
     override fun onStop() = flightsUseCase.dispose()
 
-    private fun onSuccess(scheduleResource: ScheduleResource) {
+    internal fun onSuccess(scheduleResource: ScheduleResource) {
         val scheduleList = scheduleResource.schedule
 
         if (scheduleList.isNotEmpty()) {
@@ -28,7 +28,7 @@ class FlightsListPresenter(private val flightsUseCase: FlightsUseCase
         }
     }
 
-    private fun onError(throwable: Throwable) {
+    internal fun onError(throwable: Throwable) {
         view.hideLoading()
         view.showError(throwable)
     }

@@ -62,17 +62,17 @@ class OAuthActivity : RootActivity(), OAuthContract.View {
 
     override fun hideLoading() = oauthLoading.hide()
 
-    override fun hideError() {
-        oauthError.hide()
-        retryConnection.hide()
-        oauthInfo.text = getString(R.string.oauth_info)
-    }
-
     override fun showError(throwable: Throwable) {
         oauthLoading.invisible()
         retryConnection.show()
         oauthError.show()
         oauthInfo.text = throwable.message
+    }
+
+    override fun hideError() {
+        oauthError.hide()
+        retryConnection.hide()
+        oauthInfo.text = getString(R.string.oauth_info)
     }
 
     override fun saveOAuthToken(oAuthResponse: OAuthResponse) {

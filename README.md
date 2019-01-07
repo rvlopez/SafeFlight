@@ -66,7 +66,7 @@ Scheduled flights between given airports on a given date.
 * Animations provided by Lottie 
 
 
-## Thirtd-Party
+## Third-Party
 
 * RxKotlin https://github.com/ReactiveX/RxKotlin
 * Dagger 2 https://google.github.io/dagger/
