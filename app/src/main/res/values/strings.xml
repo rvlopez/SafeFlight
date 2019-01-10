@@ -4,7 +4,7 @@
     <string name="api_key">AIzaSyBz0UlmGsKk7dZum9B2L7_Gl2VPLdcB21I</string>
 
     <string name="search_fly_button">Continue</string>
-    <string name="origin_label">Select your origin:</string>
+    <string name="origin_label">Select your origin</string>
     <string name="destination_label">Select your destination</string>
     <string name="oauth_info">Looking for Airports. \nWait a moment please!</string>
     <string name="flight_not_found_error">Flights not found! Please, try again with another origin and destination.</string>
