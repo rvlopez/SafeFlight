@@ -1,8 +1,8 @@
 package com.example.rviciana.safeflight
 
-import android.support.test.InstrumentationRegistry
-import android.support.test.runner.AndroidJUnit4
 
+import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.runner.AndroidJUnit4
 import org.junit.Test
 import org.junit.runner.RunWith
 
@@ -18,7 +18,7 @@ class ExampleInstrumentedTest {
     @Test
     fun useAppContext() {
         // Context of the app under test.
-        val appContext = InstrumentationRegistry.getTargetContext()
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.example.rviciana.safefly", appContext.packageName)
     }
 }

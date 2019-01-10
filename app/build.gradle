@@ -54,8 +54,24 @@ dependencies {
     testImplementation 'org.mockito:mockito-core:2.23.0'
     testImplementation 'com.nhaarman:mockito-kotlin:1.6.0'
     testImplementation 'org.mockito:mockito-inline:2.8.47'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    androidTestImplementation "androidx.test:runner:1.1.0-beta01"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.1.0-beta01"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:3.1.0-beta01"
+    androidTestImplementation "androidx.test.uiautomator:uiautomator:2.2.0-beta02"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:3.1.0-beta01"
+    androidTestImplementation "com.github.fabioCollini.daggermock:daggermock-kotlin:0.8.4"
+    androidTestImplementation "androidx.arch.core:core-testing:2.0.0"
+    androidTestImplementation "org.mockito:mockito-android:2.23.0"
+    androidTestImplementation "com.nhaarman:mockito-kotlin:1.6.0"
+    androidTestImplementation("com.schibsted.spain:barista:2.7.0") {
+        exclude group: 'com.android.support'
+        exclude group: 'com.android.support.test.espresso'
+        exclude group: 'com.android.support.test.uiautomator'
+        exclude group: 'org.jetbrains.kotlin'
+    }
 }
 
 androidExtensions {
