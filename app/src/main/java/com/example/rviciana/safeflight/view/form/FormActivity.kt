@@ -17,7 +17,8 @@ import javax.inject.Inject
 
 class FormActivity : RootActivity(), FormContract.View {
 
-    @Inject lateinit var presenter: FormContract.Presenter
+    @Inject
+    lateinit var presenter: FormContract.Presenter
 
     private val Activity.app: SafeFlightsApplication get() = application as SafeFlightsApplication
     private val component by lazy { app.component.plus(FormModule()) }
@@ -63,15 +64,17 @@ class FormActivity : RootActivity(), FormContract.View {
         var destinationAirport: Airport? = null
 
         searchViewOrigin.onItemClickListener =
-                AdapterView.OnItemClickListener {
-                    parent, _, position, _
-                    -> originAirport = parent!!.adapter.getItem(position) as Airport
+                AdapterView.OnItemClickListener { parent, _, position, _
+                    -> parent.let {
+                        originAirport = parent.adapter.getItem(position) as Airport
+                    }
                 }
 
         searchViewDestination.onItemClickListener =
-                AdapterView.OnItemClickListener {
-                    parent, _, position, _
-                    -> destinationAirport = parent!!.adapter.getItem(position) as Airport
+                AdapterView.OnItemClickListener { parent, _, position, _
+                    -> parent.let {
+                        destinationAirport = parent.adapter.getItem(position) as Airport
+                    }
                 }
 
         searchFlights.setOnClickListener {
