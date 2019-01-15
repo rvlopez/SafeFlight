@@ -75,8 +75,18 @@ class FormActivity : RootActivity(), FormContract.View {
                 }
 
         searchFlights.setOnClickListener {
-            if (originAirport != null && destinationAirport != null) {
+            val searchViewOriginText = searchViewOrigin.text
+            val searchViewDestinationText = searchViewDestination.text
+            if (originAirport != null && destinationAirport != null
+                    && searchViewOriginText.isNotEmpty()
+                    && searchViewDestinationText.isNotEmpty()) {
                 presenter.onAirportsReady(originAirport!!, destinationAirport!!)
+            } else {
+                if (searchViewOriginText.isEmpty())
+                    presenter.onOriginInputError()
+
+                if (searchViewDestinationText.isEmpty())
+                    presenter.onDestinationInputError()
             }
         }
     }
@@ -95,4 +105,21 @@ class FormActivity : RootActivity(), FormContract.View {
         NavigatorImpl(this@FormActivity)
                 .navigateToFlightsListActivity(originAirport, destinationAirport)
     }
+
+    override fun showOriginInputError() {
+        searchViewOriginLayout.error = getString(R.string.missing_test_error)
+    }
+
+    override fun showDestinationInputError() {
+        searchViewDestinationLayout.error = getString(R.string.missing_test_error)
+    }
+
+    override fun hideOriginInputError() {
+        searchViewOriginLayout.error = null
+    }
+
+    override fun hideDestinationInputError() {
+        searchViewDestinationLayout.error = null
+    }
+
 }

@@ -11,6 +11,16 @@ class FormPresenter: FormContract.Presenter {
     }
 
     override fun onAirportsReady(originAirport: Airport, destinationAirport: Airport) {
+        view.hideOriginInputError()
+        view.hideDestinationInputError()
         view.navigateToFlightsListActivity(originAirport, destinationAirport)
+    }
+
+    override fun onOriginInputError() {
+        view.showOriginInputError()
+    }
+
+    override fun onDestinationInputError() {
+        view.showDestinationInputError()
     }
 }
