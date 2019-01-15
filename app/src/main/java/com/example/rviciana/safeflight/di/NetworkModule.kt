@@ -1,5 +1,7 @@
 package com.example.rviciana.safeflight.di
 
+import android.content.Context
+import android.content.SharedPreferences
 import com.example.rviciana.safeflight.data.FlightsApi
 import com.example.rviciana.safeflight.data.NetworkConfig
 import com.example.rviciana.safeflight.data.airports.AirportsMapper
@@ -46,7 +48,7 @@ class NetworkModule {
     }
 
     @Provides
-    fun provideOAuthMapper(): OAuthMapper = OAuthMapper()
+    fun provideOAuthMapper(sharedPrefs: SharedPreferences): OAuthMapper = OAuthMapper(sharedPrefs)
 
     @Provides
     fun provideAirportsMapper(): AirportsMapper = AirportsMapper()
@@ -61,11 +63,17 @@ class NetworkModule {
 
     @Provides
     fun provideAirportsRepository(flightsApi: FlightsApi,
-                                 airportsMapper: AirportsMapper
-    ): AirportsRepository = AirportsRepositoryImpl(flightsApi, airportsMapper)
+                                  airportsMapper: AirportsMapper,
+                                  sharedPrefs: SharedPreferences
+    ): AirportsRepository = AirportsRepositoryImpl(flightsApi, airportsMapper, sharedPrefs)
 
     @Provides
     fun provideFlightsRepository(flightsApi: FlightsApi,
-                                 flightsMapper: FlightsMapper
-    ) : FlightsRepository = FlightsRepositoryImpl(flightsApi, flightsMapper)
+                                 flightsMapper: FlightsMapper,
+                                 sharedPrefs: SharedPreferences
+    ): FlightsRepository = FlightsRepositoryImpl(flightsApi, flightsMapper, sharedPrefs)
+
+    @Provides
+    fun provideSharedPrefs(context: Context): SharedPreferences
+            = context.getSharedPreferences(NetworkConfig.SHARED, Context.MODE_PRIVATE)
 }

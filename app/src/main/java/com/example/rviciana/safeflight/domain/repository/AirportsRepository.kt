@@ -5,5 +5,5 @@ import io.reactivex.Single
 
 interface AirportsRepository {
 
-    fun getAllAirports(accessToken: String, limit: Int, offset: Int): Single<AirportsResponse>
+    fun getAllAirports(limit: Int, offset: Int): Single<AirportsResponse>
 }

@@ -10,4 +10,5 @@
     <string name="flight_not_found_error">Flights not found! Please, try again with another origin and destination.</string>
     <string name="flights_toolbar_title">Flights for %1$s - %2$s</string>
     <string name="flight_time_label">Flight time: %1$s</string>
+    <string name="missing_test_error">You must select an airport</string>
 </resources>

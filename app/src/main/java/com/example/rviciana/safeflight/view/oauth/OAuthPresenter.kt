@@ -37,9 +37,7 @@ class OAuthPresenter(private val oAuthUseCase: OAuthUseCase,
     }
 
     internal fun onAuthSuccess(oAuthResponse: OAuthResponse) {
-        view.saveOAuthToken(oAuthResponse)
-        airportsUseCase.execute(oAuthResponse.accessToken,
-                NetworkConfig.LIMIT,
+        airportsUseCase.execute(NetworkConfig.LIMIT,
                 NetworkConfig.OFFSET,
                 ::onFlightsSuccess,
                 ::onError)

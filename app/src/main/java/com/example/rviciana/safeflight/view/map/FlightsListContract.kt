@@ -13,7 +13,7 @@ interface FlightsListContract {
 
     interface Presenter {
         fun setView(view: FlightsListContract.View)
-        fun onViewReady(accessToken: String, origin: String, destination: String, fromDate: String)
+        fun onViewReady(origin: String, destination: String, fromDate: String)
         fun onStop()
     }
 }

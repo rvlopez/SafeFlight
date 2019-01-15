@@ -56,20 +56,11 @@ class OAuthPresenterTest {
     }
 
     @Test
-    fun `should save access token`() {
-        val oAuthResponse = givenSuccessTokenResponse()
-        presenter.onAuthSuccess(oAuthResponse)
-
-        verify(mockView).saveOAuthToken(oAuthResponse)
-
-    }
-
-    @Test
     fun `should airports request data on auth success`() {
         val oAuthResponse = givenSuccessTokenResponse()
         presenter.onAuthSuccess(oAuthResponse)
 
-        verify(mockAirportsUseCase).execute(any(), any(), any(), any(), any())
+        verify(mockAirportsUseCase).execute(any(), any(), any(), any())
     }
 
     @Test

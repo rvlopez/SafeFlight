@@ -10,7 +10,7 @@ import it.cosenonjaviste.daggermock.DaggerMock
 import it.cosenonjaviste.daggermock.DaggerMockRule
 
 fun getDaggerRule(): DaggerMockRule<ApplicationComponent> =
-        DaggerMock.rule(ApplicationModule(), NetworkModule()) {
+        DaggerMock.rule(ApplicationModule(app.applicationContext), NetworkModule()) {
             set { component -> app.component = component }
         }
 

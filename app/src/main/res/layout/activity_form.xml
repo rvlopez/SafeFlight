@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".view.form.FormActivity">
 
@@ -15,37 +16,42 @@
             android:layout_height="match_parent"
             android:padding="30dp">
 
-            <TextView
-                android:id="@+id/originLabel"
-                style="@style/LabelStyle"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/searchViewOriginLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/origin_label" />
-
-            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
-                android:id="@+id/searchViewOrigin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/originLabel"
-                android:completionThreshold="1"
-                android:maxLines="1" />
-
-            <TextView
-                android:id="@+id/destinationLabel"
-                style="@style/LabelStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/searchViewOrigin"
                 android:layout_marginTop="20dp"
-                android:text="@string/destination_label" />
+                android:hint="@string/origin_label"
+                app:hintTextAppearance="@style/LabelStyle"
+                app:errorTextAppearance="@style/TextError">
 
-            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
-                android:id="@+id/searchViewDestination"
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/searchViewOrigin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/searchViewDestinationLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/destinationLabel"
-                android:completionThreshold="1"
-                android:maxLines="1" />
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/searchViewOriginLayout"
+                android:hint="@string/destination_label"
+                app:hintTextAppearance="@style/LabelStyle"
+                app:errorTextAppearance="@style/TextError">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/searchViewDestination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/searchFlights"

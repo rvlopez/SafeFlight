@@ -14,9 +14,9 @@ class FlightsUseCase @Inject constructor(private val flightsRepository: FlightsR
 
     private var disposable: Disposable = Disposables.empty()
 
-    fun execute(accessToken: String, origin: String, destination: String, fromDate: String,
+    fun execute(origin: String, destination: String, fromDate: String,
                 onComplete: (ScheduleResource) -> Unit, onError: (Throwable) -> Unit) {
-        disposable = flightsRepository.getFlights(accessToken, origin, destination, fromDate)
+        disposable = flightsRepository.getFlights(origin, destination, fromDate)
                 .subscribeOn(subscribeOn)
                 .observeOn(observeOn)
                 .subscribe(onComplete, onError)

@@ -24,13 +24,13 @@ interface FlightsApi {
                         @Field("grant_type") grantType: String): Single<OAuthDto>
 
     @GET("references/airports/")
-    fun getAllAirports(@Header(AUTHORIZATION) accessToken: String,
+    fun getAllAirports(@Header(AUTHORIZATION) accessToken: String?,
                        @Query(LIMIT) limit: Int,
                        @Query(OFFSET) offset: Int
     ): Single<AirportsResponseDto>
 
     @GET("operations/schedules/{origin}/{destination}/{fromDateTime}")
-    fun getFlights(@Header(AUTHORIZATION) accessToken: String,
+    fun getFlights(@Header(AUTHORIZATION) accessToken: String?,
                    @Path(ORIGIN) origin: String,
                    @Path(DESTINATION) destination: String,
                    @Path(FROM_DATE_TIME) fromDateTime: String
