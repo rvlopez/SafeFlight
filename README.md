@@ -6,17 +6,17 @@ The following is a brief description of the technical decisions taken for the de
 
 ## App Screenshots
 
-<img src="https://i.imgur.com/NvmTn62.png" width="250">  <img src="https://i.imgur.com/6zkPN5M.png" width="250">  <img src="https://i.imgur.com/Wi2wM9Y.png" width="250">  
+<img src="https://i.imgur.com/NvmTn62.png" width="250">  <img src="https://i.imgur.com/JKRP5XN.png" width="250">  <img src="https://i.imgur.com/Lj4oAQ6.png" width="250">  
 
 <img src="https://i.imgur.com/Fcnsw4b.png" width="250">  <img src="https://i.imgur.com/19UDovJ.png" width="250">  <img src="https://i.imgur.com/51xqhmf.png" width="250"> 
 
 ## Error States
 
-This application has two possible error scenarios. The first occurs on the airport data loading screen. Two requests are made, the first is the authentication request to receive the access token. Second, the request to receive the airports is made. There is a wide range of errors in both requests, so the error message of the server is displayed in the error screen. The user can retry the connection using the retry button. The second error scenario occurs when requesting flight information between origin and destination. Occasionally, the server does not find route data and returns a 404. Therefore, an error suggestion is displayed instead of the flight list.
+This application has three possible error scenarios. The first occurs on the airport data loading screen. Two requests are made, the first is the authentication request to receive the access token. The second error is a check of empty fields before searching for flights. The missing field(s) is(are) marked in red so that the user has feedback and can act accordingly. Third, the request to receive the airports is made. There is a wide range of errors in both requests, so the error message of the server is displayed in the error screen. The user can retry the connection using the retry button. The second error scenario occurs when requesting flight information between origin and destination. Occasionally, the server does not find route data and returns a 404. Therefore, an error suggestion is displayed instead of the flight list.
 
 #### How is it shown in the app?
 
-<img src="https://i.imgur.com/zPzt8tL.png" width="250">  <img src="https://i.imgur.com/x70qxD3.png" width="250">
+<img src="https://i.imgur.com/zPzt8tL.png" width="250">  <img src="https://i.imgur.com/B31D5Nc.png" width="250">  <img src="https://i.imgur.com/x70qxD3.png" width="250">
 
 ## API Service Highlights
 
