@@ -9,4 +9,6 @@ object NetworkConfig {
     const val BEARER = "Bearer "
     const val LIMIT = 50
     const val OFFSET = 0
+    const val SHARED = "SHARED"
+    const val OATUH_TOKEN = "oauth_token"
 }

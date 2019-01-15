@@ -11,13 +11,11 @@ import com.example.rviciana.safeflight.R
 import com.example.rviciana.safeflight.SafeFlightsApplication
 import com.example.rviciana.safeflight.domain.bo.Airport
 import com.example.rviciana.safeflight.domain.bo.Schedule
-import com.example.rviciana.safeflight.extensions.getValue
 import com.example.rviciana.safeflight.extensions.hide
 import com.example.rviciana.safeflight.extensions.show
 import com.example.rviciana.safeflight.extensions.today
 import com.example.rviciana.safeflight.view.RootActivity
 import com.example.rviciana.safeflight.view.map.di.FlightsModule
-import com.example.rviciana.safeflight.view.oauth.OAuthActivity
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -110,11 +108,8 @@ class FlightsMapListActivity : RootActivity(), FlightsListContract.View, OnMapRe
 
     private fun getFlights() {
         val date = Date()
-        val sharedPreferences = app.sharedPreferences
-        val accessToken = sharedPreferences.getValue(OAuthActivity.OATUH_TOKEN)
 
-        presenter.onViewReady(accessToken!!,
-                originAirport.airportCode,
+        presenter.onViewReady(originAirport.airportCode,
                 destinationAirport.airportCode,
                 date.today())
     }

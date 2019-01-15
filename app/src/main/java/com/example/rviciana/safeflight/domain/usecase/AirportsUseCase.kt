@@ -13,9 +13,9 @@ class AirportsUseCase @Inject constructor(private val airportsRepository: Airpor
 ) {
     private var disposable: Disposable = Disposables.empty()
 
-    fun execute(accessToken: String, limit: Int, offset: Int,
+    fun execute(limit: Int, offset: Int,
                 onComplete: (AirportsResponse) -> Unit, onError: (Throwable) -> Unit) {
-        disposable = airportsRepository.getAllAirports(accessToken, limit, offset)
+        disposable = airportsRepository.getAllAirports(limit, offset)
                 .subscribeOn(subscribeOn)
                 .observeOn(observeOn)
                 .subscribe(onComplete, onError)

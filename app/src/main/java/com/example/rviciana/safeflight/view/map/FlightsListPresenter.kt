@@ -12,9 +12,9 @@ class FlightsListPresenter(private val flightsUseCase: FlightsUseCase
         this.view = view
     }
 
-    override fun onViewReady(accessToken: String, origin: String, destination: String, fromDate: String) {
+    override fun onViewReady(origin: String, destination: String, fromDate: String) {
         view.showLoading()
-        flightsUseCase.execute(accessToken, origin, destination, fromDate, ::onSuccess, ::onError)
+        flightsUseCase.execute(origin, destination, fromDate, ::onSuccess, ::onError)
     }
 
     override fun onStop() = flightsUseCase.dispose()

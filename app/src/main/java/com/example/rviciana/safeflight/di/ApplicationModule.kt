@@ -1,7 +1,6 @@
 package com.example.rviciana.safeflight.di
 
 import android.content.Context
-import com.example.rviciana.safeflight.SafeFlightsApplication
 import dagger.Module
 import dagger.Provides
 import io.reactivex.Scheduler
@@ -10,10 +9,10 @@ import io.reactivex.schedulers.Schedulers
 import javax.inject.Named
 
 @Module
-class ApplicationModule {
+class ApplicationModule(private val applicationContext: Context) {
 
     @Provides
-    fun context(application: SafeFlightsApplication): Context = application.applicationContext
+    fun context(): Context = applicationContext
 
     @Provides
     @Named("observeOn")

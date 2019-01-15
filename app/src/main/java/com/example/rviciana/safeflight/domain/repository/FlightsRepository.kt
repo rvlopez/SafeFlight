@@ -5,6 +5,6 @@ import io.reactivex.Single
 
 interface FlightsRepository {
 
-    fun getFlights(accessToken: String, origin: String, destination: String, fromDateTime: String)
+    fun getFlights(origin: String, destination: String, fromDateTime: String)
             : Single<ScheduleResource>
 }

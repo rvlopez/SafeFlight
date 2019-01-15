@@ -35,7 +35,7 @@ class FlightMapListActivityTest {
     @Test
     fun test() {
         given {
-            flightsRepository.getFlights("", "", "", "")
+            flightsRepository.getFlights("", "", "")
         }.willReturn(
                 Single.just(
                         ScheduleResource(
