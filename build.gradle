@@ -30,6 +30,13 @@ task clean(type: Delete) {
 ext {
 
     // Third-party
+    rxKotlinVersion = '2.2.0'
+    rxAndroidVersion = '2.1.0'
+    retrofitVersion = '2.5.0'
+    gsonVersion = '2.4.0'
+    adapterRxJavaVersion = '2.2.0'
+    rxJava2Adapter = '1.0.0'
+    okHttp3Version = '3.11.0'
     daggerVersion = '2.11'
     lottieVersion = '2.8.0'
 }
