@@ -23,4 +23,12 @@ class FormPresenter: FormContract.Presenter {
     override fun onDestinationInputError() {
         view.showDestinationInputError()
     }
+
+    override fun onOriginEraserClicked() {
+        view.clearSearchViewOrigin()
+    }
+
+    override fun onDestinationEraserClicked() {
+        view.clearSearchViewDestination()
+    }
 }

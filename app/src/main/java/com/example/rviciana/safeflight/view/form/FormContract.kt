@@ -10,6 +10,8 @@ interface FormContract {
         fun showDestinationInputError()
         fun hideOriginInputError()
         fun hideDestinationInputError()
+        fun clearSearchViewOrigin()
+        fun clearSearchViewDestination()
     }
 
     interface Presenter {
@@ -17,5 +19,7 @@ interface FormContract {
         fun onAirportsReady(originAirport: Airport, destinationAirport: Airport)
         fun onOriginInputError()
         fun onDestinationInputError()
+        fun onOriginEraserClicked()
+        fun onDestinationEraserClicked()
     }
 }

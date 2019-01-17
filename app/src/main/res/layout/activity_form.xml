@@ -22,6 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:hint="@string/origin_label"
+                android:orientation="horizontal"
                 app:hintTextAppearance="@style/LabelStyle"
                 app:errorTextAppearance="@style/TextError">
 
@@ -30,7 +31,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:completionThreshold="1"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:drawableEnd="@drawable/eraser" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -49,7 +51,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:completionThreshold="1"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:drawableEnd="@drawable/eraser"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 

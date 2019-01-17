@@ -4,6 +4,8 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.MotionEvent
+import android.view.View
 import android.widget.AdapterView
 import com.example.rviciana.safeflight.R
 import com.example.rviciana.safeflight.SafeFlightsApplication
@@ -63,19 +65,42 @@ class FormActivity : RootActivity(), FormContract.View {
         var originAirport: Airport? = null
         var destinationAirport: Airport? = null
 
-        searchViewOrigin.onItemClickListener =
-                AdapterView.OnItemClickListener { parent, _, position, _
-                    -> parent.let {
+        with(searchViewOrigin) {
+            onItemClickListener =
+                    AdapterView.OnItemClickListener { parent, _, position, _ ->
                         originAirport = parent.adapter.getItem(position) as Airport
                     }
-                }
-
-        searchViewDestination.onItemClickListener =
-                AdapterView.OnItemClickListener { parent, _, position, _
-                    -> parent.let {
-                        destinationAirport = parent.adapter.getItem(position) as Airport
+            setOnTouchListener(View.OnTouchListener { _, event ->
+                if (event != null) {
+                    if (event.action == MotionEvent.ACTION_UP) {
+                        if (event.rawX >= (right - compoundDrawables[2].bounds.width())) {
+                            presenter.onOriginEraserClicked()
+                            return@OnTouchListener true
+                        }
                     }
                 }
+                return@OnTouchListener false
+            })
+        }
+
+        with(searchViewDestination) {
+            onItemClickListener =
+                    AdapterView.OnItemClickListener { parent, _, position, _ ->
+                        destinationAirport = parent.adapter.getItem(position) as Airport
+                    }
+
+            setOnTouchListener(View.OnTouchListener { _, event ->
+                if (event != null) {
+                    if (event.action == MotionEvent.ACTION_UP) {
+                        if (event.rawX >= (right - compoundDrawables[2].bounds.width())) {
+                            presenter.onDestinationEraserClicked()
+                            return@OnTouchListener true
+                        }
+                    }
+                }
+                return@OnTouchListener false
+            })
+        }
 
         searchFlights.setOnClickListener {
             val searchViewOriginText = searchViewOrigin.text
@@ -118,11 +143,19 @@ class FormActivity : RootActivity(), FormContract.View {
     }
 
     override fun hideOriginInputError() {
-        searchViewOriginLayout.error = null
+        searchViewOriginLayout.isErrorEnabled = false
     }
 
     override fun hideDestinationInputError() {
-        searchViewDestinationLayout.error = null
+        searchViewDestinationLayout.isErrorEnabled = false
+    }
+
+    override fun clearSearchViewOrigin() {
+        searchViewOrigin.text.clear()
+    }
+
+    override fun clearSearchViewDestination() {
+        searchViewDestination.text.clear()
     }
 
 }
